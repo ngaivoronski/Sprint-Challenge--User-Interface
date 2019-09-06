@@ -28,6 +28,26 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+header {
+    display: flex;
+    flex-direction: column;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px 20px 10px 0px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header .header-img {
+    margin: 20px 0px;
+}
+
 body {
 	line-height: 1;
 }
@@ -50,6 +70,17 @@ table {
 * {
     box-sizing: border-box;
 }
+
+#box1 {background-color: teal; }
+#box2 {background-color: gold; }
+#box3 {background-color: cadetblue; }
+#box4 {background-color: coral; }
+#box5 {background-color: crimson; }
+#box6 {background-color: forestgreen; }
+#box7 {background-color: darkorchid; }
+#box8 {background-color: hotpink; }
+#box9 {background-color: indigo; }
+#box10 {background-color: dodgerblue; }
 
 html, body {
     height: 100%;
