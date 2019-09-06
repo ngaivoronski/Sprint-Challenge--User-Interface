@@ -28,6 +28,40 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+header {
+    display: flex;
+    flex-direction: column;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px 20px 10px 0px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header .header-img {
+    margin: 20px 0px;
+}
+
+header nav a:hover {
+    animation-name: spinner;
+    animation-duration: 1.5s;
+}
+
+@media (max-width: 600px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+    header a {
+        width: 100%;
+    }
+}
+
 body {
 	line-height: 1;
 }
@@ -51,6 +85,17 @@ table {
     box-sizing: border-box;
 }
 
+#box1 {background-color: teal; }
+#box2 {background-color: gold; }
+#box3 {background-color: cadetblue; }
+#box4 {background-color: coral; }
+#box5 {background-color: crimson; }
+#box6 {background-color: forestgreen; }
+#box7 {background-color: darkorchid; }
+#box8 {background-color: hotpink; }
+#box9 {background-color: indigo; }
+#box10 {background-color: dodgerblue; }
+
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
@@ -67,8 +112,14 @@ p {
 }
 
 .container {
-    width: 800px;
+    width: 50%;
     margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
 }
 
 .top-content {
@@ -83,6 +134,12 @@ p {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
+}
+
+@media (max-width: 600px) {
+    .top-content .text-container {
+        width: 100%;
+    }
 }
 
 .middle-content {
@@ -112,6 +169,18 @@ p {
     justify-content: center;
 }
 
+@media (max-width: 1400px) {
+    .middle-content .boxes .box {
+        width: 100px;
+    }
+}
+
+.middle-content .boxes .box:hover {
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -124,6 +193,15 @@ p {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+@media (max-width: 600px) {
+    .bottom-content {
+        flex-wrap: wrap;
+    }
+    .bottom-content .text-container {
+        width: 100%;
+    }
 }
 
 footer {
@@ -143,4 +221,40 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+footer nav a:hover {
+    animation-name: spinner;
+    animation-duration: 1.5s;
+}
+
+@media (max-width: 600px) {
+    footer nav {
+        flex-wrap: wrap;
+    }
+    footer nav a {
+        width: 100%;
+    }
+}
+
+/* animations */
+
+@keyframes spinner {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
