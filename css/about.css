@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 /* Overall style */
 
 .container {
-    width: 800px;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -47,6 +47,12 @@ h1, h2, h3, h4, h5 {
     font-size: 18px;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
 }
 
 /* Header style */
@@ -67,8 +73,22 @@ header a {
     color: black;
 }
 
+header a:hover {
+    animation-name: spinner;
+    animation-duration: 1.5s;
+}
+
 header .header-img {
     margin: 20px 0px;
+}
+
+@media (max-width: 600px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+    header a {
+        width: 100%;
+    }
 }
 
 /* Top Content Style */
@@ -113,6 +133,18 @@ button {
     padding: 7px 10px;
 }
 
+button:hover {
+    animation-name: learn-more;
+    animation-duration: .4s;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 1400px) {
+    .middle-content .text-container {
+        width: 350px;
+    }
+}
+
 /* Bottom Content Style */
 
 .bottom-content {
@@ -147,4 +179,78 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+footer nav a:hover {
+    animation-name: spinner;
+    animation-duration: 1.5s;
+}
+
+/* animations */
+
+@keyframes spinner {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes learn-more {
+        0% { transform: translate(1px, 1px) rotate(0deg); 
+            color: red;
+            background-color:yellow;
+        }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); 
+            color: red;
+            background-color:yellow;
+        }
+        20% { transform: translate(-3px, 0px) rotate(1deg); 
+            color: red;
+            background-color:yellow;
+        }
+        30% { transform: translate(3px, 2px) rotate(0deg); 
+            color: red;
+            background-color:yellow;
+        }
+        40% { transform: translate(1px, -1px) rotate(1deg); 
+            color: red;
+            background-color:yellow;
+        }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); 
+            color: yellow;
+            background-color:red;
+        }
+        60% { transform: translate(-3px, 1px) rotate(0deg); 
+            color: yellow;
+            background-color:red;
+        }
+        70% { transform: translate(3px, 1px) rotate(-1deg); 
+            color: yellow;
+            background-color:red;
+        }
+        80% { transform: translate(-1px, -1px) rotate(1deg); 
+            color: yellow;
+            background-color:red;
+        }
+        90% { transform: translate(1px, 2px) rotate(0deg); 
+            color: yellow;
+            background-color:red;
+        }
+        100% { transform: translate(1px, -2px) rotate(-1deg); 
+            color: yellow;
+            background-color:red;
+        }
 }
