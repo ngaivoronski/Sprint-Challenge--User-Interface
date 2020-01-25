@@ -17,3 +17,8 @@
     width: auto;
 }
 
+.conp{
+    border-bottom: black 2px dotted;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+}
