@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 /* Overall style */
 
 .container {
-    width: 50%;
+    width: 62%;
     margin: 0 auto;
 }
 
@@ -112,7 +112,7 @@ header .header-img {
 .middle-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
