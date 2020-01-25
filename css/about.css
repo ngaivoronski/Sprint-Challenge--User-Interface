@@ -33,10 +33,7 @@ footer, header, hgroup, menu, nav, section {
 
 /* Overall style */
 
-.container {
-    width: 62%;
-    margin: 0 auto;
-}
+
 
 html, body {
     height: 100%;

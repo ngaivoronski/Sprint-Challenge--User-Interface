@@ -1,0 +1,19 @@
+
+.container{
+    margin: 0 auto;
+}
+.con-form{
+   margin-bottom: 5%;
+    padding: 3%;
+}
+
+.con-inputs{
+    width: 350px;
+    margin-bottom: 2%;
+}
+
+#con-in{
+    height: 400px;
+    width: auto;
+}
+
