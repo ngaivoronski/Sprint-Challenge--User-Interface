@@ -112,7 +112,7 @@ p {
 }
 
 .container {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -155,7 +155,7 @@ p {
 .middle-content .boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .middle-content .boxes .box {
@@ -227,6 +227,8 @@ footer nav a:hover {
     animation-name: spinner;
     animation-duration: 1.5s;
 }
+
+
 
 @media (max-width: 600px) {
     footer nav {
